@@ -1,9 +1,11 @@
 FROM node
 
-WORKDIR /
+WORKDIR /usr/
 
-COPY . .
+COPY . /usr/
+
+EXPOSE 5000
 
 RUN npm i
 
-CMD ["node", "index.js"]
+CMD ["npm", "run", "dev"]
